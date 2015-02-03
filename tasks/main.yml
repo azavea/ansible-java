@@ -1,9 +1,16 @@
 ---
+- name: Check if Java is already present
+  shell: which java
+  register: java_exists
+
 - name: Install OpenJDK JRE (headless)
   apt: pkg=openjdk-7-jre-headless={{ java_version }} state=present
+  when: not java_exists|success
 
 - name: Install OpenJDK JRE
   apt: pkg=openjdk-7-jre={{ java_version }} state=present
+  when: not java_exists|success
 
 - name: Install OpenJDK
   apt: pkg=openjdk-7-jdk={{ java_version }} state=present
+  when: not java_exists|success
