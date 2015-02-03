@@ -1,12 +1,15 @@
 ---
 - name: Install OpenJDK JRE (headless)
-  apt: pkg=openjdk-7-jre-headless={{ java_version }} state=present
+  apt: pkg=openjdk-{{ java_major_version }}-jre-headless={{ java_version }}
+       state=present
 
 - name: Install OpenJDK JRE
-  apt: pkg=openjdk-7-jre={{ java_version }} state=present
+  apt: pkg=openjdk-{{ java_major_version }}-jre={{ java_version }}
+       state=present
 
 - name: Install OpenJDK
-  apt: pkg=openjdk-7-jdk={{ java_version }} state=present
+  apt: pkg=openjdk-{{ java_major_version }}-jdk={{ java_version }}
+       state=present
 
 - name: Set OpenJDK as the default
-  alternatives: name=java path="/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java"
+  alternatives: name=java path="/usr/lib/jvm/java-{{ java_major_version }}-openjdk-amd64/jre/bin/java"
