@@ -12,6 +12,12 @@
 - name: Install Oracle Java
   apt: pkg=oracle-java{{ java_major_version }}-installer={{ java_version }}
        state=present
+  when: java_version != "latest"
+
+- name: Install Oracle Java
+  apt: pkg=oracle-java{{ java_major_version }}-installer
+       state=present
+  when: java_version == "latest"
 
 - name: Set Oracle Java as the default
   alternatives: name=java path="/usr/lib/jvm/java-{{ java_major_version }}-oracle/jre/bin/java"
