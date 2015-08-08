@@ -11,5 +11,10 @@
   apt: pkg=openjdk-{{ java_major_version }}-jdk={{ java_version }}
        state=present
 
+- name: Determine if 64bit architecture
+  set_fact:
+    ansible_architecture: amd64
+  when: ansible_architecture == "x86_64"
+
 - name: Set OpenJDK as the default
-  alternatives: name=java path="/usr/lib/jvm/java-{{ java_major_version }}-openjdk-amd64/jre/bin/java"
+  alternatives: name=java path="/usr/lib/jvm/java-{{ java_major_version }}-openjdk-{{ ansible_architecture }}/jre/bin/java"
