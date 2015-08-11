@@ -1,3 +1,7 @@
+## 0.2.2
+
+- Add support for 32-bit operating systems.
+
 ## 0.2.1
 
 - Add support for supplying a major Java version to install via `java_major_version`.
