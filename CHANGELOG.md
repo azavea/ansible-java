@@ -1,3 +1,8 @@
+## 0.2.3
+
+- Required minimum Ansible version is now 1.8.
+- Uses wildcards for package versions.
+
 ## 0.2.2
 
 - Add support for 32-bit operating systems.
