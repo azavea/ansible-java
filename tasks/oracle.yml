@@ -15,3 +15,9 @@
 
 - name: Set Oracle Java as the default
   alternatives: name=java path="/usr/lib/jvm/java-{{ java_major_version }}-oracle/jre/bin/java"
+
+- name: Write ld.so.conf for Java
+  template:
+    src: java.conf.j2
+    dest: /etc/ld.so.conf.d/java.conf
+  notify: reload ldconfig
