@@ -20,4 +20,5 @@
   template:
     src: java.conf.j2
     dest: /etc/ld.so.conf.d/java.conf
-  notify: reload ldconfig
+  notify:
+    - Reload ldconfig
