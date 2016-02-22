@@ -7,7 +7,7 @@
 
   roles:
     # OpenJDK 7
-    - { role: "azavea.java", java_version: "7u75*" }
+    - { role: "azavea.java" }
     # OpenJDK 8 does not exist in the supported platforms of this role
     # Oracle Java 7
     #- { role: "azavea.java", java_version: "7u76*", java_flavor: "oracle", java_oracle_accept_license_agreement: True }
