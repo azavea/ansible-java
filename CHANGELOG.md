@@ -1,3 +1,7 @@
+## 0.2.5
+
+- Update default Java version.
+
 ## 0.2.4
 
 - Update default Java version.
