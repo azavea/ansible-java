@@ -1,0 +1,16 @@
+---
+ansible:
+  config_file: ansible.cfg
+  sudo: True
+
+vagrant:
+  platforms:
+    - name: trusty64
+      box: ubuntu/trusty64
+
+  providers:
+    - name: virtualbox
+      type: virtualbox
+
+  instances:
+    - name: ansible-java
