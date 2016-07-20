@@ -10,4 +10,4 @@ An Ansible role for installing Java.
 - `java_oracle_accept_license_agreement` - Flag to accept the Oracle license agreement (default: `False`)
 
 ## Testing
-Tests are done using [molecule](http://molecule.readthedocs.io/). To run the test suite, install molecule and it's dependencies and do ` $ molecule test` from the folder containing molecule.yml. To add additional tests, add a [testinfra](http://testinfra.readthedocs.org/) python script in the [tests](./tests/) directory. 
+Tests are done using [molecule](http://molecule.readthedocs.io/). To run the test suite, install molecule and it's dependencies and do ` $ molecule test` from the folder containing molecule.yml. To add additional tests, add a [testinfra](http://testinfra.readthedocs.org/) python script in the [tests](./tests/) directory, or add a function to [test_java.py](./tests/test_java.py). Information about available Testinfra modules is available [here](http://testinfra.readthedocs.io/en/latest/modules.html). 
