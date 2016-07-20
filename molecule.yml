@@ -5,11 +5,10 @@ ansible:
 
 vagrant:
   platforms:
+
     - name: trusty64
       box: ubuntu/trusty64
 
-    - name: xenial64
-      box: ubuntu/xenial64
 
   providers:
     - name: virtualbox
@@ -17,3 +16,4 @@ vagrant:
 
   instances:
     - name: ansible-java
+
