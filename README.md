@@ -9,6 +9,3 @@ An Ansible role for installing Java.
 - `java_flavor` - Flavor of Java to install (default: `openjdk` but can also be `oracle`)
 - `java_oracle_accept_license_agreement` - Flag to accept the Oracle license agreement (default: `False`)
 
-## Example Playbook
-
-See the [examples](./examples/) directory.
