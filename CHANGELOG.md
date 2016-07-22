@@ -1,3 +1,7 @@
+## 0.3.0
+
+- Replace Vagrant example project with Molecule.
+
 ## 0.2.6
 
 - Update default Java version.
