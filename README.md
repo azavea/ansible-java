@@ -15,7 +15,7 @@ Tests are done using [molecule](http://molecule.readthedocs.io/). To run the tes
 ### Example 
 ```
 # Download molecule, dependencies
-$ brew install molecule
+$ pip install molecule
 
 # Change to the top-level project directory, which contains molecule.yml
 $ cd /path/to/ansible-java
