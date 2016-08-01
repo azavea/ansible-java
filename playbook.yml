@@ -32,13 +32,13 @@
 
   roles:
     # OpenJDK 7, all Defaults
-     - { role: "ansible-java",
-         when:
+    - { role: "ansible-java",
+        when:
           "{{ ansible_distribution_version | version_compare('16.04','<') }}" }
 
-     - { role: "ansible-java", java_major_version: "8", java_version: "8u91*",
-         when:
-           "{{ ansible_distribution_version | version_compare('16.04','>=') }}" }
+    - { role: "ansible-java", java_major_version: "8", java_version: "8u91*",
+        when:
+          "{{ ansible_distribution_version | version_compare('16.04','>=') }}" }
 
     # version override for 14.04
     # - { role: "ansible-java", java_version: "7u51*",
