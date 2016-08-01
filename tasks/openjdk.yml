@@ -3,6 +3,11 @@
   apt: pkg=openjdk-{{ java_major_version }}-jre-headless={{ java_version }}
        state=present
 
+- name: Install OpenJDK (headless)
+  apt: pkg=openjdk-{{ java_major_version }}-jdk-headless={{ java_version }}
+       state=present
+  when: java_major_version | version_compare('8', '>=')
+
 - name: Install OpenJDK JRE
   apt: pkg=openjdk-{{ java_major_version }}-jre={{ java_version }}
        state=present
