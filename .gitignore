@@ -1,3 +1,9 @@
 .vagrant
+
+# Molecule
+*.log
 .molecule
 .cache
+
+# Ansible
+*.retry
