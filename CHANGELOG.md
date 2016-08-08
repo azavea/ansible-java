@@ -1,3 +1,7 @@
+## 0.4.0
+
+- Add Molecule testing support for Ubuntu 16.04
+
 ## 0.3.0
 
 - Replace Vagrant example project with Molecule.
