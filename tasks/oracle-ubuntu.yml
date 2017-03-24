@@ -1,0 +1,3 @@
+---
+- name: Configure the WebUpd8 repository
+  apt_repository: repo="ppa:webupd8team/java" state=present

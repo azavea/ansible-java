@@ -1,6 +1,5 @@
 ---
-- name: Configure the WebUpd8 repository
-  apt_repository: repo="ppa:webupd8team/java" state=present
+- include: "oracle-{{ ansible_distribution | lower }}.yml"
 
 - name: Accept Oracle license
   debconf: name=oracle-java{{ java_major_version }}-installer
