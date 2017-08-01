@@ -1,3 +1,7 @@
+## 0.5.0
+
+- Install OpenJDK 8 via PPA for Ubuntu 14.04
+
 ## 0.4.0
 
 - Add Molecule testing support for Ubuntu 16.04

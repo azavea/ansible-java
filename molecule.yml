@@ -1,7 +1,7 @@
 ---
 ansible:
   config_file: ansible.cfg
-  sudo: True
+  become: True
 
 vagrant:
   platforms:
