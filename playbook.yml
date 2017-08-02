@@ -27,7 +27,7 @@
     - name: Install python
       raw: apt-get install -yq python
       become: True
-      when: "{{ ubuntu_release.stdout | version_compare('16.04', '>=') }}"
+      when: ubuntu_release.stdout | version_compare('16.04', '>=')
       changed_when: False
 
     # Gather facts once ansible dependencies are installed
