@@ -1,20 +1,7 @@
 ---
 - name: Add OpenJDK PPA
   apt_repository: repo='ppa:openjdk-r/ppa'
-  when: "{{ ansible_distribution_version | version_compare('14.04', '=') and java_major_version | version_compare('8', '>=') }}"
-
-- name: Install OpenJDK JRE (headless)
-  apt: pkg=openjdk-{{ java_major_version }}-jre-headless={{ java_version }}
-       state=present
-
-- name: Install OpenJDK (headless)
-  apt: pkg=openjdk-{{ java_major_version }}-jdk-headless={{ java_version }}
-       state=present
-  when: java_major_version | version_compare('8', '>=')
-
-- name: Install OpenJDK JRE
-  apt: pkg=openjdk-{{ java_major_version }}-jre={{ java_version }}
-       state=present
+  when: ansible_distribution_version | version_compare('16.04', '<') and java_major_version | version_compare('8', '>=')
 
 - name: Install OpenJDK
   apt: pkg=openjdk-{{ java_major_version }}-jdk={{ java_version }}

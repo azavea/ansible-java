@@ -27,7 +27,7 @@
     - name: Install python
       raw: apt-get install -yq python
       become: True
-      when: "{{ ubuntu_release.stdout | version_compare('16.04', '>=') }}"
+      when: ubuntu_release.stdout | version_compare('16.04', '>=')
       changed_when: False
 
     # Gather facts once ansible dependencies are installed
@@ -36,25 +36,22 @@
 
   roles:
     # OpenJDK 8, all Defaults
-    - { role: "ansible-java" }
+    - role: "ansible-java"
+      when: ansible_distribution_version | version_compare('16.04', '<')
 
-    # version override for 14.04
-    # - { role: "ansible-java", java_version: "7u51*",
-    #     when:
-    #     "{{ ansible_distribution_version | version_compare('16.04','<') }}" }
+    # Version override for 16.04
+    - role: "ansible-java"
+      java_version: "8u131*"
+      when: ansible_distribution_version | version_compare("16.04", ">=")
 
-    # version override for 16.04
-    # - { role: "ansible-java", java_version: "8u77*",
-    #     java_major_version: "8",
-    #     when:
-    #     "{{ ansible_distribution_version | version_compare('16.04','>=') }}" }
+    # Java_version override
+    # - role: "ansible-java"
+    #   java_version: "8u44*"
+    #   when: ansible_distribution_version | version_compare('16.04','<')
 
-    # Java_major_version override for 14.04
-    # - { role: "ansible-java", java_version: "6u39*", java_major_version: "6",
-    #     when:
-    #     "{{ ansible_distribution_version | version_compare('16.04','<') }}" }
 
-    # Java_major_version override for 16.04
-    # - { role: "ansible-java", java_version: "9*", java_major_version: "9",
-    #     when:
-    #     "{{ ansible_distribution_version | version_compare('16.04','>=') }}" }
+    # Java_major_version override
+    # - role: "ansible-java"
+    #   java_version: "9*"
+    #   java_major_version: 9
+    #   when: ansible_distribution_version | version_compare('16.04','<')
