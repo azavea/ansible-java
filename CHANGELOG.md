@@ -1,3 +1,8 @@
+## 0.6.0
+
+- Remove Jinja2 template delimiters from `when` statements.
+- Stop manually installing the JRE. It is automatically installed along with the JDK.
+
 ## 0.5.0
 
 - Install OpenJDK 8 via PPA for Ubuntu 14.04
