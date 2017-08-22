@@ -1,3 +1,6 @@
 ---
 - name: Reload ldconfig
   command: "ldconfig"
+
+- name: Install SSL certificates
+  command: /var/lib/dpkg/info/ca-certificates-java.postinst configure
