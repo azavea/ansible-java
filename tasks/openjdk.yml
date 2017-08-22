@@ -6,6 +6,7 @@
 - name: Install OpenJDK
   apt: pkg=openjdk-{{ java_major_version }}-jdk={{ java_version }}
        state=present
+  notify: Install SSL certificates
 
 - name: Determine if 64bit architecture
   set_fact:
