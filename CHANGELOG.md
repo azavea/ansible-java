@@ -1,3 +1,7 @@
+## 0.6.1
+
+- Run ca-certificates-java postinstall step after OpenJDK is installed.
+
 ## 0.6.0
 
 - Remove Jinja2 template delimiters from `when` statements.
