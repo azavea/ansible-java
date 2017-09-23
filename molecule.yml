@@ -3,6 +3,14 @@ ansible:
   config_file: ansible.cfg
   become: True
 
+molecule:
+  test:
+    sequence:
+      - destroy
+      - syntax
+      - create
+      - converge
+
 vagrant:
   platforms:
     - name: trusty64
