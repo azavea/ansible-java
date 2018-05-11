@@ -17,7 +17,7 @@ vagrant:
       box: ubuntu/trusty64
 
     - name: xenial64
-      box: ubuntu/xenial64
+      box: bento/ubuntu-16.04
 
   providers:
     - name: virtualbox
