@@ -1,3 +1,7 @@
+## 0.6.2
+
+- Execute JDK post-install script without depending on Ansible handlers.
+
 ## 0.6.1
 
 - Run ca-certificates-java postinstall step after OpenJDK is installed.
