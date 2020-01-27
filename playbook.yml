@@ -20,20 +20,20 @@
   roles:
     # OpenJDK 8, all Defaults
     - role: "ansible-java"
-      when: ansible_distribution_version | version_compare('16.04', '<')
+      when: ansible_distribution_version is version('16.04', '<')
 
     # Version override for 16.04
     - role: "ansible-java"
       java_version: "8u*"
-      when: ansible_distribution_version | version_compare("16.04", ">=")
+      when: ansible_distribution_version is version("16.04", ">=")
 
     # Java_version override
     # - role: "ansible-java"
     #   java_version: "8u44*"
-    #   when: ansible_distribution_version | version_compare('16.04','<')
+    #   when: ansible_distribution_version is version('16.04','<')
 
     # Java_major_version override
     # - role: "ansible-java"
     #   java_version: "9*"
     #   java_major_version: 9
-    #   when: ansible_distribution_version | version_compare('16.04','<')
+    #   when: ansible_distribution_version is version('16.04','<')
