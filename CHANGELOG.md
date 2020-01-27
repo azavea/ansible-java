@@ -1,3 +1,8 @@
+## 0.7.0
+
+ - Bump minimum ansible version to 2.5 and update ansible syntax.
+ - Add supported Ubuntu versions Xenial and Bionic.
+
 ## 0.6.2
 
 - Execute JDK post-install script without depending on Ansible handlers.
